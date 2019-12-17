@@ -4,6 +4,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.security.Principal;
 import java.util.UUID;
 
 @RestController
@@ -13,10 +14,11 @@ public class BikeController {
 	private BikeRentalSystem bikeRentalSystem;
 
 	@PostMapping
-	public OperationResultDto rent(RentBikeCommand command) {
-		// TODO: replace null
-		BikeRentResult bikeRentResult = bikeRentalSystem
-			.rentBike(UUID.fromString(command.getBikeId()), null);
+	public OperationResultDto rent(RentBikeCommand command,
+				       Principal principal) {
+		BikeRentResult bikeRentResult = bikeRentalSystem.rentBike(UUID
+			.fromString(command.getBikeId()), new User(principal
+			.getName()));
 		return map(bikeRentResult);
 	}
 
