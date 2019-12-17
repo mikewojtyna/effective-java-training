@@ -17,9 +17,15 @@
 
 	<properties>
 		<java.version>11</java.version>
+		<joda-money.version>1.0.1</joda-money.version>
 	</properties>
 
 	<dependencies>
+		<dependency>
+			<groupId>org.joda</groupId>
+			<artifactId>joda-money</artifactId>
+			<version>${joda-money.version}</version>
+		</dependency>
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>

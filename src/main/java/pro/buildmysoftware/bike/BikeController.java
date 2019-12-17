@@ -14,8 +14,9 @@ public class BikeController {
 
 	@PostMapping
 	public OperationResultDto rent(RentBikeCommand command) {
+		// TODO: replace null
 		BikeRentResult bikeRentResult = bikeRentalSystem
-			.rentBike(UUID.fromString(command.getBikeId()));
+			.rentBike(UUID.fromString(command.getBikeId()), null);
 		return map(bikeRentResult);
 	}
 
