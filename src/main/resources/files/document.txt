@@ -1,0 +1,11 @@
+::Header::
+Header name
+
+::Paragraph::
+paragraph content
+
+::Paragraph::
+paragraph 2 content
+
+::Footer::
+footer content
