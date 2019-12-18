@@ -4,7 +4,7 @@ import java.time.LocalDate;
 import java.util.Optional;
 
 /**
- * A simple syntactic builder pattern. It's not the same patterns as full GoF
+ * A simple syntactic builder pattern. It's not the same pattern as full GoF
  * pattern.
  */
 public class User {
