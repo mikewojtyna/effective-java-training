@@ -30,12 +30,11 @@ public class ObserverTest {
 		eventManager.emitEvents(1, EventType.EVENT1);
 
 		// then
-		verify(observer0, times(1)).eventOccured(EventType.EVENT0);
-		verify(observer1, times(1)).eventOccured(EventType.EVENT1);
+		verify(observer0).eventOccured(EventType.EVENT0);
+		verify(observer1).eventOccured(EventType.EVENT1);
 	}
 
-	@DisplayName("should observer be notified multiple times each time for" +
-		" the matching event")
+	@DisplayName("should observer be notified multiple times each time " + "for" + " the matching event")
 	@Test
 	void test1() throws Exception {
 		// given
